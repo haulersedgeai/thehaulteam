@@ -35,7 +35,6 @@ export const SITE = {
 export type NavItem = { href: string; label: string; hasMenu?: boolean };
 
 export const NAV_MAIN: NavItem[] = [
-  { href: "/", label: "Home" },
   { href: "/services", label: "Services", hasMenu: true },
   { href: "/locations", label: "Service Area" },
   { href: "/pricing", label: "Pricing" },

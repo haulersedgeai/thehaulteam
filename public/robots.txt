@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://thehaulteam.com
+
+# Sitemaps
+Sitemap: https://thehaulteam.com/sitemap.xml

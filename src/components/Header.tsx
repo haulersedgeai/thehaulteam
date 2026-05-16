@@ -2,10 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
-import { SITE, NAV_MAIN } from "@/lib/site";
-import { SERVICES, SERVICE_CATEGORIES, getServicesByCategory } from "@/content/services";
+import { SITE, NAV_MAIN, NAV_MOBILE } from "@/lib/site";
+import { SERVICE_CATEGORIES, getServicesByCategory } from "@/content/services";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -16,9 +15,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-ink/10 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/images/logo.png" alt="The Haul Team" width={140} height={40} className="h-10 w-auto" priority />
-          <span className="sr-only">{SITE.name}</span>
+        <Link href="/" className="font-display text-2xl font-extrabold tracking-tight text-ink transition-colors hover:text-brand">
+          The Haul Team
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -108,7 +106,7 @@ export function Header() {
         <div className="border-t border-ink/10 bg-white lg:hidden">
           <nav className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
             <ul className="space-y-1">
-              {NAV_MAIN.map((item) => (
+              {NAV_MOBILE.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

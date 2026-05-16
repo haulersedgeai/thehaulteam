@@ -32,7 +32,7 @@ export function Footer() {
   return (
     <footer className="bg-ink text-cream">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
           <div className="lg:col-span-2">
             <div className="text-2xl font-extrabold text-white">{SITE.name}</div>
             <p className="mt-3 max-w-sm text-cream/70">{SITE.tagline}</p>
@@ -110,6 +110,18 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-sm font-bold uppercase tracking-wide text-gold">Company</div>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li><Link href="/about" className="text-cream/80 hover:text-white">About</Link></li>
+              <li><Link href="/reviews" className="text-cream/80 hover:text-white">Reviews</Link></li>
+              <li><Link href="/items-we-take" className="text-cream/80 hover:text-white">Items We Take</Link></li>
+              <li><Link href="/gallery" className="text-cream/80 hover:text-white">Gallery</Link></li>
+              <li><Link href="/faq" className="text-cream/80 hover:text-white">FAQ</Link></li>
+              <li><Link href="/get-a-quote" className="text-cream/80 hover:text-white">Get a Quote</Link></li>
             </ul>
           </div>
         </div>

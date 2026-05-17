@@ -25,7 +25,7 @@ function Youtube(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 import { SITE } from "@/lib/site";
-import { SERVICE_CATEGORIES, getServicesByCategory } from "@/content/services";
+import { SERVICE_CATEGORIES } from "@/content/services";
 import { CITIES, NEIGHBORHOODS } from "@/content/locations";
 
 export function Footer() {
@@ -127,7 +127,18 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-cream/10 pt-6 text-sm text-cream/60 md:flex-row md:items-center">
-          <div>© {new Date().getFullYear()} {SITE.legal}. Licensed & insured in Texas.</div>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-2">
+            <span>© {new Date().getFullYear()} {SITE.legal}. Licensed & insured in Texas.</span>
+            <span className="hidden sm:inline" aria-hidden="true">·</span>
+            <a
+              href="https://adimize.com?ref=thehaulteam"
+              target="_blank"
+              rel="noopener"
+              className="transition-colors hover:text-white"
+            >
+              Site by Adimize — Home Service Digital Marketing
+            </a>
+          </div>
           <div className="flex gap-4">
             <Link href="/faq" className="hover:text-white">FAQ</Link>
             <Link href="/contact" className="hover:text-white">Contact</Link>
